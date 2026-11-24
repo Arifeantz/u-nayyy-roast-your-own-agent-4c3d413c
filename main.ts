@@ -5,7 +5,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const ROAST =
-  "Bre spent all night re-rendering a single walk cycle so the feet would touch the ground, then shipped it floating anyway and called it style.";
+  "Bre spent all night re-rendering a single walk cycle until the feet touched the ground, then shipped it floating anyway and called it style.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", ROAST, "utf8");
