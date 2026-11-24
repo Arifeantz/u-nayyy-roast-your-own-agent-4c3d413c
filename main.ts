@@ -7,5 +7,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 const ROAST =
   "Bre spent all night re-rendering a single walk cycle until the feet touched the ground, then shipped it floating anyway and called it style.";
 
+// Keep the entry within the allowed length for a single line.
+if (ROAST.length < 1 || ROAST.length > 200) {
+  throw new Error("Roast entry must be between 1 and 200 characters.");
+}
+
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", ROAST, "utf8");
